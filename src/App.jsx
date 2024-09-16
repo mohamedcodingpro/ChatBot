@@ -48,7 +48,7 @@ const App = () => {
 
   return (
     <>
-      <div className="container w-screen min-h-screen overflow-x-hidden bg-[#0E0E0E] text-white">
+      <div className="container w-screen min-h-screen overflow-x-hidden bg-[#587ed0] text-white">
         {
           isResponseScreen ?
             <div className='h-[80vh]'>
@@ -111,7 +111,7 @@ const App = () => {
               message == "" ? "" : <i className='text-green-500 text-[20px] mr-5 cursor-pointer' onClick={hitRequest}><IoSend /></i>
             }
           </div>
-          <p className='text-[gray] text-[14px] my-4'>AssistMe is developed by Mo. Mahdi Farooqui. this AI use the gemini API for giving the response  </p>
+          <p className='text-[#ede7e7] text-[14px] my-4'>AssistMe is developed by Mo. Mahdi Farooqui. this AI use the gemini API for giving the response  </p>
         </div>
       </div>
     </>
