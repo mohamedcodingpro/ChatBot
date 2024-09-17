@@ -12,14 +12,14 @@ const App = () => {
   const [messages, setMessages] = useState([]); 
   let allMessages = [];
 
-  const hitRequest = () => {
+  function hitRequest() {
     if (message) {
-      generateResponse(message);
+      generateResponse(message)
     }
     else {
       alert("You must write somthing... !")
     }
-  };
+  }
 
   
   const generateResponse = async (msg) => {
@@ -53,7 +53,7 @@ const App = () => {
           isResponseScreen ?
             <div className='h-[80vh]'>
               <div className="header pt-[25px] flex items-center justify-between w-[100vw] px-[300px]">
-                <h2 className='text-2xl'>AssistMe</h2>
+                <h2 className='text-2xl'>Medi Aid</h2>
                 <button id='newChatBtn' className='bg-[#181818] p-[10px] rounded-[30px] cursor-pointer text-[14px] px-[20px]' onClick={newChat}>New Chat</button>
               </div>
 
@@ -70,7 +70,7 @@ const App = () => {
               </div>
             </div> :
             <div className="middle h-[80vh] flex items-center flex-col justify-center">
-              <h1 className='text-4xl'>AssistMe</h1>
+              <h1 className='text-4xl'>Medi Aid</h1>
               <div className="boxes mt-[30px] flex items-center gap-2">
                 <div className="card rounded-lg cursor-pointer transition-all hover:bg-[#201f1f] px-[20px] relative min-h-[20vh] bg-[#181818] p-[10px]">
                   <p className='text-[18px]'>What is coding ? <br />
@@ -111,7 +111,7 @@ const App = () => {
               message == "" ? "" : <i className='text-green-500 text-[20px] mr-5 cursor-pointer' onClick={hitRequest}><IoSend /></i>
             }
           </div>
-          <p className='text-[#ede7e7] text-[14px] my-4'>AssistMe is developed by Mo. Mahdi Farooqui. this AI use the gemini API for giving the response  </p>
+          <p className='text-[#131212] text-[14px] my-4'>Medi Aid is developed by Parallel Group . this AI use the gemini API for giving the response  </p>
         </div>
       </div>
     </>
