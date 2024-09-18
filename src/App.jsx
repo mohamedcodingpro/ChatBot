@@ -25,7 +25,7 @@ const App = () => {
   const generateResponse = async (msg) => {
     if (!msg) return;
     
-    const genAI = new GoogleGenerativeAI("AIzaSyD4XgKCysD-FngDe-lzonfrTeStOwodsgU");
+    const genAI = new GoogleGenerativeAI("AIzaSyDzPcs3pYP0tPAPoXdMTn0TRDOZHsqHh0k");
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
     const result = await model.generateContent(msg);
     
@@ -53,7 +53,7 @@ const App = () => {
           isResponseScreen ?
             <div className='h-[80vh]'>
               <div className="header pt-[25px] flex items-center justify-between w-[100vw] px-[300px]">
-                <h2 className='text-2xl'>AssistMe</h2>
+                <h2 className='text-2xl'>Dem Aid Assist Me</h2>
                 <button id='newChatBtn' className='bg-[#181818] p-[10px] rounded-[30px] cursor-pointer text-[14px] px-[20px]' onClick={newChat}>New Chat</button>
               </div>
 
@@ -111,7 +111,7 @@ const App = () => {
               message == "" ? "" : <i className='text-green-500 text-[20px] mr-5 cursor-pointer' onClick={hitRequest}><IoSend /></i>
             }
           </div>
-          <p className='text-[#ede7e7] text-[14px] my-4'>AssistMe is developed by Mo. Mahdi Farooqui. this AI use the gemini API for giving the response  </p>
+          <p className='text-[#ede7e7] text-[14px] my-4'>AssistMe is developed by Group Parallel Universe. this AI use the gemini API for giving the response to any user </p>
         </div>
       </div>
     </>
